@@ -1,0 +1,17 @@
+{
+  "name": "yurnell",
+  "version": "0.0.1",
+  "description": "Programmable Journal Entries for GoDBLedger",
+  "main": "cli.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Darcy <darcys22@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^15.1.0"
+  }
+}

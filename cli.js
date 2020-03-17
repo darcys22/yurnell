@@ -6,13 +6,9 @@ var Tasks = require("./lib/tasks");
 var command = new Command(Tasks);
 
 const inputArguments = process.argv.slice(2);
-const userWantsGeneralHelp =
-  (inputArguments[0] === "help" || inputArguments[0] === "--help") &&
-  inputArguments.length === 1;
 
-if (userWantsGeneralHelp) {
-  inputArguments[0] === "list"
-  process.exit(0);
+if (inputArguments.length == 0) {
+  inputArguments.push("list")
 }
 
 command.run(inputArguments, function(err) {

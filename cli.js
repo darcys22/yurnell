@@ -1,29 +1,12 @@
 #!/usr/bin/env node
 
-const Command = require("./lib/command");
+var Command = require("./lib/command");
+var Tasks = require("./lib/tasks");
 
-const command = new Command(require("./lib/commands"));
-
-let options = { logger: console };
-
-const inputArguments = process.argv.slice(2);
-const userWantsGeneralHelp =
-  (inputArguments[0] === "help" || inputArguments[0] === "--help") &&
-  inputArguments.length === 1;
-
-if (userWantsGeneralHelp) {
-  command.displayGeneralHelp();
-  process.exit(0);
-}
-
-command.run(inputArguments, options, function(err) {
+var command = new Command(Tasks);
+command.run(process.argv.slice(2), function(err) {
   if (err) {
-    if (err instanceof TaskError) {
-      command.displayGeneralHelp();
-    } else {
-        console.log(err.message);
+    console.log(err.message);
     process.exit(1);
-    }
   }
-  process.exit(0);
 });

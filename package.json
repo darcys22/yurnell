@@ -12,6 +12,15 @@
   "author": "Sean Darcy <darcys22@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@dagrejs/graphlib": "^2.1.4",
+    "async": "^3.2.0",
+    "find-up": "^4.1.0",
+    "lodash": "^4.17.15",
+    "mkdirp": "^1.0.3",
+    "node-dir": "^0.1.17",
     "yargs": "^15.1.0"
+  },
+  "bin": {
+    "yurnell": "./cli.js"
   }
 }

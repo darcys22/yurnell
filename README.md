@@ -8,6 +8,11 @@ Programmable journal entries for GoDBLedger
 sudo npm install -g
 ```
 
+### Running List
+```
+yurnell list
+```
+
 ### Running Migrate
 ```
 yurnell migrate

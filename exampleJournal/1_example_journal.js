@@ -1,5 +1,5 @@
 //var MyContract = artifacts.require("MyContract");
-var MyJournal = journal;
+var MyJournal = Yurnell.newJournal();
 
 module.exports = function(deployer) {
   console.log(MyJournal);

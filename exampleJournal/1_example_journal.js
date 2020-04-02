@@ -2,7 +2,7 @@
 var MyJournal = Yurnell.newJournal();
 
 module.exports = function(deployer) {
-  console.log(MyJournal);
+  MyJournal.test()
   // deployment steps
   deployer.deploy();
 };

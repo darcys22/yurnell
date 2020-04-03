@@ -7,20 +7,23 @@ module.exports = function(deployer) {
 
   lineitem = Yurnell.newLineItem();
   lineitem.particulars = "something particular";
-  lineitem.amount = -10;
+  lineitem.amount = 10.0;
   lineitem.account = "Income";
   MyJournal.add(lineitem);
 
-  MyJournal.add(Yurnell.newLineItem({
+  MyJournal.add(Yurnell.newLineItem(options : {
     particulars: "something particular",
-    amount: 10,
+    amount: 20,
     account: "Cash"
   }));
 
-  console.log(MyJournal.date.toString())
-  console.log(MyJournal.length)
-  console.log(MyJournal.valid)
+  //console.log(MyJournal.date.toString())
+  //console.log(MyJournal.length)
+  //console.log(MyJournal.balance().toFormat())
+  //console.log(MyJournal.Get(1))
+  console.log(MyJournal.valid())
+
   // deployment steps
-  deployer.deploy();
+  deployer.deploy(MyJournal);
 };
 

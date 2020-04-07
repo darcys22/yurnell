@@ -11,9 +11,9 @@ module.exports = function(deployer) {
   lineitem.account = "Income";
   MyJournal.add(lineitem);
 
-  MyJournal.add(Yurnell.newLineItem(options : {
+  MyJournal.add(Yurnell.newLineItem({
     particulars: "something particular",
-    amount: 20,
+    amount: -10,
     account: "Cash"
   }));
 
@@ -21,9 +21,9 @@ module.exports = function(deployer) {
   //console.log(MyJournal.length)
   //console.log(MyJournal.balance().toFormat())
   //console.log(MyJournal.Get(1))
-  console.log(MyJournal.valid())
+  //console.log(MyJournal.valid())
 
   // deployment steps
-  deployer.deploy(MyJournal);
+  deployer.deploy(MyJournal)
 };
 
